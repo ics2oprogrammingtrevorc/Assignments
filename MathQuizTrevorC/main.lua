@@ -21,8 +21,8 @@ local correctAnswer
 local incorrectAnswer
 local randomOperator
 local score
-local totalSeconds = 5
-local secondsLeft = 5
+local totalSeconds = 6
+local secondsLeft = 6
 local clockText
 local countdownTimer
 
@@ -106,7 +106,7 @@ end
 
 
 
-local function NumericFeildListener( event )
+local function NumericFieldListener( event )
 
 	if ( event.phase == "began" ) then
 
@@ -165,17 +165,21 @@ incorrectObject:setTextColor(0.3, 0.3, 1)
 incorrectObject.isVisible = false
 
 
-numericFeild = native.newTextField( display.contentWidth/1.5, display.contentHeight/2, 350, 150)
-numericFeild.inputType = "number"
+numericField = native.newTextField( display.contentWidth/1.5, display.contentHeight/2, 350, 150)
+numericField.inputType = "number"
 
-clockText = display.newText
+clockText = display.newText( "", display.contentCenterY, 150, native.systemFont, 150)
+clockText.anchorX = 0
+clockText.anchorY = 0
+clockText.x = 100
+clockText.y = display.contentHeight/4
 
 
 --------------------------------------------
 --Listeners
 --------------------------------------------
 
-numericFeild:addEventListener( "userInput", NumericFeildListener )
+numericField:addEventListener( "userInput", NumericFieldListener )
 
 --------------------------------------------
 --Function Calls
