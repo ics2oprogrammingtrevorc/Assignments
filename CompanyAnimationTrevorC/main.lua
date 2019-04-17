@@ -1,7 +1,8 @@
 -----------------------------------------------------------------------------------------
---
--- main.lua
---
+--Name: TrevorC
+--Title: CompanyLogoAnimation
+--COURSE: ICS2O
+--This programs animates the company logo I created based on the one they drew
 -----------------------------------------------------------------------------------------
 
 -- Your code here
