@@ -9,17 +9,26 @@
 
 display.setStatusBar(display.HiddenStatusBar)
 
+----------------------------------------------------
+--Global Variables
+----------------------------------------------------
 scrollSpeed = 3
 
+----------------------------------------------------
+--Local Variables
+----------------------------------------------------
 -- display company logo
-local paw = display.newImageRect("Images/CompanyLogo.png", 70, 70)
+local paw
+paw = display.newImageRect("Images/CompanyLogo.png", 70, 70)
 paw.x = 100
 paw.y = display.contentHeight/1
 
 -- make it invisible
 paw.alpha = 0
 
-
+----------------------------------------------------
+--Global Functions
+----------------------------------------------------
 function stopPaw()
 	Runtime:removeEventListener("enterFrame", movePaw)
 	paw.x = display.contentCenterX
@@ -41,6 +50,8 @@ function movePaw(event)
 	end
 end
 
-
+----------------------------------------------------
+--Event Listeners
+----------------------------------------------------
 
 Runtime:addEventListener("enterFrame", movePaw)
